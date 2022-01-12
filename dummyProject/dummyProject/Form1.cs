@@ -19,7 +19,7 @@ namespace dummyProject
         private string Query { set; get; }
         private string Sql { get; set; }
         public static  double x ;
-        public string TId { set; get; }
+        //public string TId { set; get; }
         public Form1()
         {
             InitializeComponent();
@@ -196,9 +196,8 @@ namespace dummyProject
 
        public void Form1_Load(object sender, EventArgs e)
         {
-            string data = TId;
-            lblTest.Text = data;
-            balance();
+            
+           // balance();
             this.btnSubmit.Enabled = false;
             this.btnCalculator.Enabled = false;
             this.btnNext.Enabled = false;
@@ -206,7 +205,7 @@ namespace dummyProject
             this.btnAd.Enabled = false;
             //this.txtValue.Text = x.ToString();
         }
-       public void balance()
+      /* public void balance()
         {
             SqlConnection Sqlcon = new SqlConnection(@"Data Source=DESKTOP-SGI1TQE;Initial Catalog=projectthesis;Persist Security Info=True;User ID=sa;Password=P@ssword");
             Sqlcon.Open();
@@ -219,7 +218,7 @@ namespace dummyProject
                 x = x + Convert.ToDouble(txtValue.Text);
             }
         }
-
+      */
         private void btnActive_Click(object sender, EventArgs e)
         {
             if (this.txtId.Text=="")
