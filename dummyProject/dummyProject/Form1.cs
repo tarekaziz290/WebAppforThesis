@@ -236,5 +236,12 @@ namespace dummyProject
                 
             }
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Login fl = new Login();
+            fl.Visible = true;
+        }
     }
 }

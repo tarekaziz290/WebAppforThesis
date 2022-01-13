@@ -44,6 +44,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnActive = new System.Windows.Forms.Button();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnNext
@@ -221,6 +222,17 @@
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 14;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(353, 296);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 15;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,6 +240,7 @@
             this.BackColor = System.Drawing.Color.DarkKhaki;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(454, 331);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnActive);
             this.Controls.Add(this.label5);
@@ -270,6 +283,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnActive;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
 
