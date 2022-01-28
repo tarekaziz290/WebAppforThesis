@@ -243,5 +243,73 @@ namespace dummyProject
             Login fl = new Login();
             fl.Visible = true;
         }
+
+        private void cmbFeatures_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.cmbFeatures.SelectedItem.ToString() == "SlideShow")
+            {
+                if (MessageBox.Show("Are you want to use features?\n you need spend 60 points", "User Service", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (x >= 60)
+                    {
+                        x = x - 60;
+                        string query = "update Users set Balance = '" + x + "'where Id = '" + this.txtId.Text + "';";
+                        int count = this.Da.ExecuteDML(query);
+                        this.Visible = false;
+                        Welcome fl = new Welcome();
+                        fl.Visible = true;
+
+                        //System.Diagnostics.Process.Start("https://final.tnrsoft.com");
+                    }
+                    else
+                    {
+                        MessageBox.Show("you have not enough point ");
+                    }
+                }
+
+
+            }
+            else if (this.cmbFeatures.SelectedItem.ToString() == "Calculator")
+            {
+                if (MessageBox.Show("Are you want to use features?\n you need spend 40 points", "User Service", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (x >= 40)
+                    {
+                        x = x - 40;
+                        string query = "update Users set Balance = '" + x + "'where Id = '" + this.txtId.Text + "';";
+                        int count = this.Da.ExecuteDML(query);
+                        this.Visible = false;
+                        Calculator fl = new Calculator();
+                        fl.Visible = true;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("you have not enough point ");
+                    }
+                }
+            }
+
+            else if (this.cmbFeatures.SelectedItem.ToString() == "Information")
+            {
+                if (MessageBox.Show("Are you want to use features?\n you need spend 30 points", "User Service", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (x >= 30)
+                    {
+                        x = x - 30;
+                        string query = "update Users set Balance = '" + x + "'where Id = '" + this.txtId.Text + "';";
+                        int count = this.Da.ExecuteDML(query);
+                        this.Visible = false;
+                        next fl = new next();
+                        fl.Visible = true;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("you have not enough point ");
+                    }
+                }
+            }
+        }
     }
 }
